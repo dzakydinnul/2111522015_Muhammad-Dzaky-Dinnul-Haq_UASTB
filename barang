@@ -1,0 +1,15 @@
+package Database;
+
+//kelas dengan nama Barang
+public class Barang 
+{
+    //contructor
+    public Barang(Object object, int i) 
+    {
+        Barang B = new Barang(null,0);
+        B.NamaBarang();
+    }
+
+    //method
+    public void NamaBarang() {}
+}
