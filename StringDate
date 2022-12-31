@@ -1,0 +1,51 @@
+package Database;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+//kelas dengan nama StringDate
+public class StringDate 
+{
+    //method string and date
+    public StringDate(){}
+
+    //method date
+    public void Date()
+    {
+          Calendar calendar = Calendar.getInstance();
+          System.out.println();
+          System.out.println("Date and Time       : " + calendar.getTime());
+
+          Date date = new Date();
+          SimpleDateFormat d = new SimpleDateFormat("E yyyy.MM.dd");
+          System.out.print("Tanggal Transaksi   : " +d.format(date)); 
+          
+          System.out.print("\nWaktu               : " + calendar.get(Calendar.HOUR_OF_DAY));
+          System.out.print("." + calendar.get(Calendar.MINUTE));
+          System.out.print("." + calendar.get(Calendar.SECOND));
+          System.out.println();
+
+    }
+
+    //method untuk mengembalikan string hasil dari konversi ke upper case
+    public void StringtoUpperCase()
+    {
+        System.out.println();
+        String cetak = "           SELAMAT DATANG DI JAJANYUK ";
+        System.out.print(cetak.toUpperCase());
+        System.out.println();
+    }
+
+    //method untuk mengembalikan copy dari string yang telah dilakukan operasi trim
+    public void StringTrim()
+    {
+            System.out.println();
+            String AlamatTk = "        Jln.in aja dlu    ";
+            String NoHp = "     081363330731     ";
+            System.out.println(AlamatTk.trim());
+            System.out.println(NoHp.trim());
+            System.out.println();   
+    }
+}
+
