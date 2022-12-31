@@ -1,0 +1,51 @@
+package Database;
+
+//kelas dengan nama TransaksiPenjualan dan interface pada kelas Potongan
+public class TransaksiPenjualan implements Potongan
+{
+	public double Diskon;
+	public double potongan;
+    int Harga, Jumlah;
+		
+	@Override
+	public double potongan(Double diskon) {
+		
+		int subTotHarga = Harga * Jumlah;
+    {
+			//percabangan if else
+			if(subTotHarga < 50000)
+			{
+				Diskon = 0.0;
+				System.out.println("\n     Potongan Harga = " + (subTotHarga * Diskon));
+				potongan = subTotHarga * Diskon;
+			}
+		
+			else if(subTotHarga >= 50000 && subTotHarga < 500000)
+			{
+				Diskon = 0.1;
+				System.out.println("\n     Potongan Harga = " + (subTotHarga * Diskon));
+				potongan = subTotHarga * Diskon;
+			}
+		
+			else if(subTotHarga >= 500000 && subTotHarga < 1000000)
+			{
+				Diskon = 0.2;
+				System.out.println("\n     Potongan Harga = " + (subTotHarga * Diskon));
+				potongan = subTotHarga * Diskon;
+			}
+		
+			else
+			{
+				Diskon = 0.5;
+				System.out.println("\n     Potongan Harga = " + (subTotHarga * Diskon));
+				potongan = subTotHarga * Diskon;
+			}
+
+			int totHarga = (int) (subTotHarga - (Diskon * subTotHarga));
+     		System.out.print("\n     Total Harga : " + totHarga);
+			System.out.println();
+
+		return 0;
+	}
+}
+}
