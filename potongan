@@ -1,0 +1,7 @@
+package Database;
+
+//kelas interface dengan nama Potongan
+public interface Potongan 
+{
+	double potongan(Double diskon);
+}
